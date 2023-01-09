@@ -1,0 +1,10 @@
+public String aOrAn(String word) {
+    //code here
+    List<String> getletters = new List<String>{'a', 'e','i','o','u'};
+    String getWordInitialLetter = word.subString(0,1);
+
+    if(getletters.contains(getWordInitialLetter)){
+        return 'an ' + word;
+    }
+    return 'a ' + word;
+}

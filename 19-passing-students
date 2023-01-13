@@ -1,6 +1,6 @@
 public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
     //code here
-    List<Boolean> booleanList = new List(){passedExam, passedAssignments, passedProject};
+    List<Boolean> booleanList = new List<Boolean>{passedExam, passedAssignments, passedProject};
 
     Integer count = 0;
 

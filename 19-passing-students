@@ -1,0 +1,17 @@
+public Boolean isPassed(Boolean passedExam, Boolean passedAssignments, Boolean passedProject) {
+    //code here
+    List<Boolean> booleanList = new List(){passedExam, passedAssignments, passedProject};
+
+    Integer count = 0;
+
+    for(Boolean result : booleanList){
+        if(result == true){
+            count++
+        }
+
+        if(count > 2){
+            return true;
+        }
+        return false;
+    }
+}

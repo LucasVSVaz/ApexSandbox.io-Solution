@@ -1,0 +1,17 @@
+public String whichTwo(Integer a, Integer b, Integer c) {
+    //code here
+    Boolean returnC = (a + b == c) || (b + a == c) ? true : false;
+    Boolean returnB = (a + c == b) || (c + a == b) ? true : false;
+    Boolean returnA = (b + c == a) || (c + b == a) : true ; false;
+
+    if(returnC){
+        return 'c';
+    } 
+    else if (returnB){
+        return 'b';
+    }
+    else if (returnA){
+        return 'a'
+    } 
+    return '';
+}

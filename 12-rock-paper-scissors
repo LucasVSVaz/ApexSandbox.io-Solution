@@ -8,12 +8,18 @@ public Integer rockPaperScissors(String player1, String player2) {
     || (player2 == 'scissors' && player1 == 'paper')
     || (player2 == 'paper ' && player1 == 'rock')) ? true : false;
 
+    Boolean zero = (player1 == player1 || player2 == player2) ? true:false;
+
     if(player1Win){
         return 1;
     } 
     else if(player2Win){
         return 2;
     } 
+    else if(zero){
+        return 0;
+    }
+
     return 0;
      
 }

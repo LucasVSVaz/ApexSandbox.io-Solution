@@ -1,0 +1,10 @@
+public String nameFromEmail(String email) {
+    //code here
+    String emailLoweCase = email.toLowerCase();
+
+    List<String> emailSplit = emailLoweCase.splitByCharacterType();
+
+    String name = emailSplit[0].capitalize() + ' ' + emailSplit[2].capitalize();
+
+    return name;
+}

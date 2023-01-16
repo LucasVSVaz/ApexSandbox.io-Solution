@@ -1,6 +1,9 @@
 public String ageGroup(Integer n) {
     //code here
-    if(n >= 0 && n <= 1){
+
+    Boolean infant = (n >= 0 && n <= 1) ? true : false;
+
+    if(infant){
         return 'Infant';
     }
     else if (n >= 2 && n <= 14){

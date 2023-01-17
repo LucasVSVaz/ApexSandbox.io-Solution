@@ -5,10 +5,10 @@ public String formatName(String firstName, String lastName) {
     List<String> nameSplit = name.split('#');
 
     if(nameSplit.size() == 2){
-        return nameSplit[0] + ', ' + nameSplit[1];
+        return nameSplit[0].capitalize() + ', ' + nameSplit[1].capitalize();
     }
     if(nameSplit.size() == 1){
-        return nameSplit[0];
+        return nameSplit[0].capitalize();
     }
     return '';
 }

@@ -1,14 +1,15 @@
 public String formatName(String firstName, String lastName) {
     //code here
-    String name = (firstName + '#' + lastName).toLowerCase();
 
-    List<String> nameSplit = name.split('#');
-
-    if(nameSplit.size() == 2){
-        return nameSplit[0].capitalize() + ', ' + nameSplit[1].capitalize();
+    if (String.isBlank(firstName) && String.isBlank(lastName)){
+        return '';
     }
-    if(nameSplit.size() == 1){
-        return nameSplit[0].capitalize();
-    }
-    return '';
+     
+    else if (String.isBlank(firstName)){
+        return lastName;
+    } 
+    else if (String.isBlank(lastName)){
+        return firstName;
+    } 
+    return lastName + ', ' + firstName;
 }

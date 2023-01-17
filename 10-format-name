@@ -5,7 +5,7 @@ public String formatName(String firstName, String lastName) {
     List<String> nameSplit = name.split('#');
 
     if(nameSplit.size() == 2){
-        return nameSplit[0].capitalize() + ', ' + nameSplit[1].capitalize();
+        return nameSplit[1].capitalize() + ', ' + nameSplit[0].capitalize();
     }
     if(nameSplit.size() == 1){
         return nameSplit[0].capitalize();

@@ -8,5 +8,7 @@ public String reverseWordsInASentence(String sentence){
         getReverse.add(getWords[i]);
     }
 
-    return getReverse;
+    String result = String.valueOf(getReverse);
+
+    return result;
 }

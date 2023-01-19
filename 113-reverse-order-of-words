@@ -8,7 +8,7 @@ public String reverseWordsInASentence(String sentence){
         getReverse.add(getWords[i]);
     }
 
-    String result = getReverse.replaceAll(",", "");
+    String result = getReverse.replaceAll(',', '');
 
     return result;
 }

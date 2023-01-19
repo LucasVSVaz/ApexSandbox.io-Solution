@@ -1,6 +1,6 @@
 public String nameFromEmail(String email) {
     //code here
-    String emailLowerCase = email.toLowerCase();
+    String emailLowerCase = email.toLowercase();
 
     List<String> emailSplit = emailLoweCase.splitByCharacterType();
 

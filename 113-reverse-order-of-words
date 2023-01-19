@@ -10,5 +10,9 @@ public String reverseWordsInASentence(String sentence){
 
     String result = String.valueOf(getReverse);
 
+    if(sentence == null){
+        return null;
+    }
+
     return result.remove(',');
 }

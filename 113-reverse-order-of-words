@@ -8,11 +8,7 @@ public String reverseWordsInASentence(String sentence){
         getReverse.add(getWords[i]);
     }
 
-    String result = String.valueOf(getReverse);
+    String result = String.valueOf(getReverse).remove(',').trim();
 
-    if(sentence == null){
-        return null;
-    }
-
-    return result.remove(',').trim();
+    return result;
 }

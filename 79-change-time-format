@@ -3,7 +3,7 @@ public String changeTimeFormat(String strTime) {
     List<String> splitTime = strTime.split(' ');
 
     Time timeChange = Time.newInstance(Integer.valueOf(splitTime[0]),
-        Integer.valueOf(splitTime[1]),0,0).addHour(12);
+        Integer.valueOf(splitTime[1]),0,0);
 
     String result = String.valueOf(timeChange);
 

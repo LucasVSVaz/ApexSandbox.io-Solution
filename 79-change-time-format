@@ -12,15 +12,14 @@ public String changeTimeFormat(String strTime) {
 
     Integer validationHour = Integer.valueOf(splitResult[0]);
 
-    String minutes = splitResult[1];
+    String timeToPrint =  splitResult[0] + ':' + splitResult[1];
     
 
 	if(validationHour > 12){
-        validationHour -= 12;
-        return  String.valueOf(validationHour) + ':' + minutes + ' PM';
+        return timeToPrint + ' PM';
     }
 	
-    return validationHour + ':' + minutes + ' AM';
+    return timeToPrint + ' AM';
 	
 
 }

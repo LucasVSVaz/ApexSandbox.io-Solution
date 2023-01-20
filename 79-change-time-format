@@ -20,7 +20,7 @@ public String changeTimeFormat(String strTime) {
         return hourPrint + ':' + minutes + ' PM';
     }
 	
-    return timeToPrint + ' AM';
+    return validationHour + ':' + minutes + ' PM';
 	
 
 }

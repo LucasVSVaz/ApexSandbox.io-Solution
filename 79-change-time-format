@@ -17,8 +17,8 @@ public String changeTimeFormat(String strTime) {
 	if(validationHour > 00 && validationHour < 12){
         return timeToPrint + ' PM';
     }
-	else {
-    	return timeToPrint + ' AM';
-	}
+	
+    return timeToPrint + ' AM';
+	
 
 }

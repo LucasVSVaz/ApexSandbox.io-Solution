@@ -15,10 +15,10 @@ public String changeTimeFormat(String strTime) {
     String timeToPrint =  splitResult[0] + ':' + splitResult[1];
 
 	if(validationHour > 00 && validationHour < 12){
-        system.debug(timeToPrint + ' PM');
+        return timeToPrint + ' PM';
     }
 	else {
-    	system.debug(timeToPrint + ' AM');
+    	return timeToPrint + ' AM';
 	}
 
 }

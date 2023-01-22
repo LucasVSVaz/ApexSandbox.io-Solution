@@ -1,6 +1,9 @@
 public List<String> getNamesInAscOrder(List<String> accountNames)
 {
-    List<String> sortedList = accountNames.sort();
-    return sortedList;
+    if(accountNames.size() < 1){
+        return null;
+    }
+
+    return accountNames.sort();
     //code here
 }

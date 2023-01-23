@@ -1,0 +1,12 @@
+public List<Integer> evenNumbers(Integer n) {
+    //code here
+    List<Integer> listInteger = new List<Integer>();
+
+    for(Integer i = 0; i < n; i++){
+        if(math.mod(i,2) == 0){
+            listInteger.add(i);
+        }
+    }
+
+    return listInteger;
+}

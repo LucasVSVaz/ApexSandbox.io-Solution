@@ -8,7 +8,7 @@ public List<Integer> evenNumbers(Integer n) {
 
     for(Integer i = 0; i < n; i++){
         num += 2;
-        listInteger.add(num)
+        listInteger.add(num);
     }
 
     return listInteger;

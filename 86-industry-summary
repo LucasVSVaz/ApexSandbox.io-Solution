@@ -3,14 +3,14 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     Decimal sum = 0.0;
 
 
-    Map<String, Decimal> getMap = new Map<String, Decimal>();
+Map<String, Decimal> getMap = new Map<String, Decimal>();
 
-    for(Account acct : accounts){
-        if(getMap.containsKey(acct.Industry)){
-        sum += acct.AnnualRevenue;
-        }
-        getMap.put(acct.Industry, sum);
-    }
+for(Account acct : accounts){
+    getMap.put(acct.Industry, acct.AnnualRevenue);
+}
+
+
+
 
     return getMap;
 }

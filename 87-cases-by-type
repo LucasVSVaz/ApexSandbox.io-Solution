@@ -7,9 +7,9 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
             if (!getMap.containsKey(c.Type)) {
                 getMap.put(c.Type, new List<Case>{c});
             }
-            
-            getMap.get(c.Type).add(c);
-            
+            else {
+                getMap.get(c.Type).add(c);
+            }
         }
     }
     return getMap;

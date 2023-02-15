@@ -6,8 +6,11 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     Map<String, Decimal> getMap = new Map<String, Decimal>();
 
     for(Account acct : accounts){
-        sum += acct.AnnualRevenue;
-        getMap.put(acct.Industry, sum);
+        if(acct){
+            sum += acct.AnnualRevenue;
+            getMap.put(acct.Industry, sum);
+        }
+        
     }
 
     return getMap;

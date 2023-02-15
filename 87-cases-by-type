@@ -6,7 +6,7 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     for(Case c : cases){
         if(c.Type != null){
             if(!getMap.containsKey(c.Type)){
-                getMap.put(c.Type, new List<Case>{c};
+                getMap.put(c.Type, new List<Case>{c});
             }
             getMap.get(c.Type).add(c);
         }

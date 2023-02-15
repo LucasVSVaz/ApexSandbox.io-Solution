@@ -13,5 +13,5 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
     }
 
     return getMap;
-    }
 }
+

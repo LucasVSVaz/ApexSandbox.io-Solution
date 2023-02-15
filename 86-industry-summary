@@ -9,7 +9,7 @@ for(Account acct : accounts){
         sum += getMap.get(acct.Industry);
         getMap.put(acct.Industry, sum);
     }
-    getMap.put(acct.Industry, acct.industrySummary);
+    getMap.put(acct.Industry, acct.AnnualRevenue);
 }
 
 

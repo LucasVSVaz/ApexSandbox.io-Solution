@@ -4,7 +4,11 @@ public String changeTimeFormat(String strTime) {
     List<String> splitTime = strTime.split(':');
 
     Time timeChange = Time.newInstance(Integer.valueOf(splitTime[0]),
-    Integer.valueOf(splitTime[1]),0,0).addHours(12);
+    Integer.valueOf(splitTime[1]),0,0);
+
+    if(splitTime[0] >= 12){
+        timeChange = timeChange.addHours(12);
+    }
 
     String result = String.valueOf(timeChange);
 

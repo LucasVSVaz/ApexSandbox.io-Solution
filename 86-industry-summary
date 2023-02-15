@@ -5,10 +5,10 @@ Map<String, Decimal> getMap = new Map<String, Decimal>();
     for (Account acct : accounts) {
         if (getMap.containsKey(acct.Industry)) {
             Decimal sum = getMap.get(acct.Industry);
-            getMap.put(a.Industry, sum + acct.AnnualRevenue);
+            getMap.put(acct.Industry, sum + acct.AnnualRevenue);
         }
         else {
-            getMap.put(a.Industry, a.AnnualRevenue);
+            getMap.put(acct.Industry, acct.AnnualRevenue);
         }
     }
     return getMap;

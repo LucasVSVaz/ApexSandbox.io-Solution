@@ -2,12 +2,12 @@ public Map<String, Decimal> industrySummary(List<Account> accounts) {
     //code here
 
 Map<String, Decimal> getMap = new Map<String, Decimal>();
-Decimal sum = 0.0;
+
 
 for(Account acct : accounts){
     if(getMap.containsKey(acct.Industry)){
-        sum += getMap.get(acct.Industry);
-        getMap.put(acct.Industry, sum + acct.AnnualRevenue);
+        Decimal getAnnualRevenue = getMap.get(acct.Industry);
+        getMap.put(acct.Industry, getAnnualRevenue + acct.AnnualRevenue);
     }
     getMap.put(acct.Industry, acct.AnnualRevenue);
 }

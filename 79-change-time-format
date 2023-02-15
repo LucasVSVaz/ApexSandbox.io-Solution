@@ -1,17 +1,11 @@
 public String changeTimeFormat(String strTime) {
     //code here
 
-    Boolean pm = false;
 
     List<String> splitTime = strTime.split(':');
 
     Time timeChange = Time.newInstance(Integer.valueOf(splitTime[0]),
-    Integer.valueOf(splitTime[1]),0,0);
-
-    if(Integer.valueOf(splitTime[0]) >= 12){
-        timeChange = timeChange.addHours(12);
-        pm = true;
-    }
+    Integer.valueOf(splitTime[1]),0,0).addHour(12);
 
     String result = String.valueOf(timeChange);
 
@@ -21,7 +15,7 @@ public String changeTimeFormat(String strTime) {
 
     String timeToPrint =  splitResult[0] + ':' + splitResult[1];
 
-	if(!pm){
+	if(validationHour >= 00 && validationHour < 12){
         return timeToPrint + ' AM';
     }
 	

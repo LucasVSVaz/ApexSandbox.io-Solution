@@ -19,10 +19,10 @@ public String changeTimeFormat(String strTime) {
     String timeToPrint =  splitResult[0] + ':' + splitResult[1];
 
 	if(validationHour > 00 && validationHour < 12){
-        return timeToPrint + ' PM';
+        return timeToPrint + ' AM';
     }
 	
-    return timeToPrint + ' AM';
+    return timeToPrint + ' PM';
 	
 
 }

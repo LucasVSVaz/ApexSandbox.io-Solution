@@ -6,8 +6,8 @@ Decimal sum = 0.0;
 
 for(Account acct : accounts){
     if(getMap.containsKey(acct.Industry)){
-        sum += (getMap.get(acct.Industry) + acct.AnnualRevenue);
-        getMap.put(acct.Industry, sum);
+        sum += getMap.get(acct.Industry);
+        getMap.put(acct.Industry, sum + acct.AnnualRevenue);
     }
     getMap.put(acct.Industry, acct.AnnualRevenue);
 }

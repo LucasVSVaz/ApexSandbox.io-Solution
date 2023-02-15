@@ -13,4 +13,6 @@ for(Account acct : accounts){
         getMap.put(acct.Industry, acct.AnnualRevenue);
     
     }
+
+    return getMap;
 }

@@ -8,7 +8,7 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
                 getMap.put(c.Type, new List<Case>{c});
             }
             else {
-                //getMap.get(c.Type).add(c);
+                
                 List<Case> addList =  getMap.get(c.Type);
 
                 addList.add(c);

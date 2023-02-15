@@ -4,7 +4,7 @@ public Map<String, Account> phoneToAccount(List<Account> accounts) {
     Map<String, String> getMap = new Map<String, String>();
 
     for(Account acct : Account){
-        if(c.Phone != null){
+        if(acct.Phone != null){
             getMap.put(acct.Phone, acct.Name);
         }
     }

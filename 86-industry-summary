@@ -6,6 +6,7 @@ Decimal sum = 0.0;
 
 for(Account acct : accounts){
     if(getMap.containsKey(acct.Industry)){
+        sum = acct.AnnualRevenue;
         sum += getMap.get(acct.Industry);
         getMap.put(acct.Industry, sum);
     }

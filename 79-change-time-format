@@ -5,27 +5,27 @@ public String changeTimeFormat(String strTime) {
 
     List<String> splitTime = strTime.split(':');
 
-    Time timeChange = Time.newInstance(Integer.valueOf(splitTime[0]),
-    Integer.valueOf(splitTime[1]),0,0);
-
-    if(Integer.valueOf(splitTime[0]) > 12){
+    Time timeChange = Time.newInstance(Integer.valueOf(splitTime[0]), Integer.valueOf(splitTime[1]),0,0);
+    
+    if(Integer.valueOf(splitTime[0]) == 0){
         timeChange = timeChange.addHours(12);
-        pm = true;
+    } else if (Integer.valueOf(splitTime[0]) == 12){
+        pm = true; 
+    } else if ((Integer.valueOf(splitTime[0]) > 12)) {
+       timeChange = timeChange.addHours(12);
+       pm = true;
     }
-
+    
     String result = String.valueOf(timeChange);
-
     List<String> splitResult = result.split(':');
-
-    Integer validationHour = Integer.valueOf(splitResult[0]);
-
-    String timeToPrint =  splitResult[0] + ':' + splitResult[1];
-
-	if(!pm){
+    Integer validateHour = Integer.valueOf(splitResult[0]);
+    String timeToPrint = splitResult[0] + ':' + splitResult[1];
+    
+    if(!pm){
         return timeToPrint + ' AM';
+    } else {
+        return timeToPrint + ' PM';
     }
-	
-    return timeToPrint + ' PM';
 	
 
 }

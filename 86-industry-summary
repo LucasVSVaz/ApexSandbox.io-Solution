@@ -5,9 +5,9 @@ Map<String, Decimal> getMap = new Map<String, Decimal>();
 Decimal sum = 0.0;
 
 for(Account acct : accounts){
-    if(getMap,containsKey(acct.Industry)){
+    if(getMap.containsKey(acct.Industry)){
         sum += getMap.get(acct.Industry);
-        getMap.put(acct.Industry, sum + acct.industrySummary);
+        getMap.put(acct.Industry, sum);
     }
     getMap.put(acct.Industry, acct.industrySummary);
 }

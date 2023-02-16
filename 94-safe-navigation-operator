@@ -9,12 +9,6 @@ public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
        getBillingCity.add(acct.BillingCity);
    }
 
-    /*for(Integer i = 0; i < getBillingCity.size(); i++){
-        if(getBillingCity[i] != null){
-        city = getBillingCity[i];
-        break;
-    }*/
-
     return getBillingCity[0]?.toUpperCase();
 }
 

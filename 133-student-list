@@ -3,19 +3,17 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
     List<apxio__Student__c> addStudent = new List<apxio__Student__c>();
     Map<String, String> stringMap =  new Map<String, String>();
 
-    for(String name : studentNames){
-        for(String email : studentEmails){
-            stringMap.put(name, email);
-        } 
+    for(Integer i = 0; i < names.size(); i++){
+        stringMap.put(names[i], emails[i]);
     }
-
-    for(String student : stringMap.keySet()){
-        apxio__Student__c newStudent = new apxio__Student__c(
-            Name = student,
-            apxio__Email__c = stringMap.get(Name)
+    
+    for(String teste : stringMap.keySet()){
+    apxio__Student__c newStudent = new apxio__Student__c(
+            Name = teste,
+            apxio__Email__c = stringMap.get(teste)
         );
-        addStudent.add(newStudent);
-    }
+     addStudent.add(newStudent);
+}
 
     insert addStudent;
 }

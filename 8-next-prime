@@ -1,0 +1,16 @@
+public Integer nextPrime(Integer num) {
+    //code here
+    
+    Integer result = 0;
+    Integer count = num;
+    
+    for(Integer i = 0; i < count; i++){
+        if(isPrime(num + 1)){
+            result = num + 1;
+        } else {
+            num++;
+        }
+    }
+
+    return result;
+}

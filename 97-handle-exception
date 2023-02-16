@@ -7,7 +7,7 @@ public String divide(Integer a, Integer b){
         result = a / b;
         return String.valueOf(result);
     } catch (Exception e){
-        return e.getMessage('Divide by 0');
-        
+        throw new AuraHandledException('Divide by 0');
+        return error.body.message;
     }
 }

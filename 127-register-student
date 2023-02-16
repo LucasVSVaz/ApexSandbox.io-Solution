@@ -1,0 +1,21 @@
+public String registerStudent(String name, String phone, String email) {
+    // code here
+
+    apxio__Student__c addStudent = new apxio__Student__c(
+        Name = name,
+        apxio__Phone__c = phone,
+        apxio__Email__c = email
+    );
+
+    List<apxio__Student__c> addStudentList = new List<apxio__Student__c>{addStudent};
+
+    insert addStudentList;
+
+    List<apxio__Student__c> getRegistrationNumber  = [
+        SELECT Id, apxio__Registration_Number__c
+        FROM apxio__Student__c
+        WHERE Id = addStudentList[0].id
+    ];
+
+    return getRegistrationNumber[0].apxio__Registration_Number__c;
+}

@@ -1,0 +1,10 @@
+public List<String> getFieldsValue(Account acc, List<String> fields)
+{
+    // code here
+    fields.add((String)acc?.get('Name'));
+    fields.add((String)acc?.get('BillingCity'));
+    fields.add((String)acc?.get('AnnualRevenue'));
+    fields.add((String)acc?.get('Rating'));
+    
+    return fields;
+}

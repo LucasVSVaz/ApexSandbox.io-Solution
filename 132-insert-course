@@ -9,7 +9,7 @@ public Id insertCourse(String name, String details, Integer credits) {
 
     List<apxio__Course__c> addCourseList = new List<apxio__Course__c>{addCourse};
 
-    if(addCourseList[0].apxio__Credits__c < 4 || addCourseList[0].apxio__Credits__c >= 1){
+    if(Integer.valueOf(addCourseList[0].apxio__Credits__c) < 4 || Integer.valueOf(addCourseList[0].apxio__Credits__c) >= 1){
         insert addCourseList;
         return addCourseList[0].id;
     }

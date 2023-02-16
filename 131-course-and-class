@@ -13,6 +13,7 @@ public void createCourseAndClass(String name, String description) {
     apxio__Class__c addClass = new apxio__Class__c();
 
     for(apxio__Course__c course : [SELECT Id, name, apxio__Course_Details__c FROM apxio__Course__c WHERE Id =: addCourseList[0].id]){
+        addClass.apxio__Course__c = course.Id;
         addClass.Name = course.name;
         addClass.apxio__Description__c = course.apxio__Course_Details__c;
     }

@@ -7,12 +7,16 @@ public Id insertCourse(String name, String details, Integer credits) {
         apxio__Credits__c = String.valueOf(credits)
     );
 
-    List<apxio__Course__c> addCourseList = new List<apxio__Course__c>{addCourse};
+    List<apxio__Course__c> addCourseList = new List<apxio__Course__c>();
 
-    if(Integer.valueOf(addCourseList[0].apxio__Credits__c) < 4 || Integer.valueOf(addCourseList[0].apxio__Credits__c) >= 1){
-        insert addCourseList;
-        return addCourseList[0].id;
+    if((Integer.valueOf(addCourse.apxio__Credits__c) < 4) && (Integer.valueOf(addCourse.apxio__Credits__c) > 1)){
+        addCourseList.add(addCourse);
     }
-    
-    return null;
+
+    if(!addCourse.isEmpty()){
+        insert addCourse;
+        return addCourse[0].id;
+    } else {
+        return null;
+    }
 }

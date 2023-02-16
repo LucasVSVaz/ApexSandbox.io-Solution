@@ -8,9 +8,8 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
                 Name = name,
                 apxio__Email__c = email
             );
-
-            addStudent.add(student);
         }
+        addStudent.add(student);
     }
 
     insert addStudent;

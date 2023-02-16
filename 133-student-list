@@ -6,11 +6,11 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
     for(Integer i = 0; i < names.size(); i++){
         stringMap.put(names[i], emails[i]);
     }
-    
-    for(String teste : stringMap.keySet()){
+
+    for(String key : stringMap.keySet()){
     apxio__Student__c newStudent = new apxio__Student__c(
-            Name = teste,
-            apxio__Email__c = stringMap.get(teste)
+            Name = key,
+            apxio__Email__c = stringMap.get(key)
         );
      addStudent.add(newStudent);
 }

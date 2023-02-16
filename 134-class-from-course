@@ -19,5 +19,5 @@ public Id classFromCourse(String courseName) {
 
     insert addClassList;
 
-    return addClassList.Id;
+    return addClassList[0].Id;
 }

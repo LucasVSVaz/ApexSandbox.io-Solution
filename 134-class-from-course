@@ -10,10 +10,12 @@ public Id classFromCourse(String courseName) {
     List<apxio__Class__c> addClassList = List<apxio__Class__c>();
 
     if(!getCourse.isEmpty()){
-        apxio__Class__c newClass = new apxio__Class__c(
-            apxio__Course__c = getCourse[0].Id,
-            Name = getCourse[0].Name
-        );
+       for(apxio__Course__c course : getCourse){
+           apxio__Class__c newClass = new apxio__Class__c(
+               apxio__Course__c = course.Id,
+               Name = course.Name
+           );
+       }
         addClassList.add(newClass);
     }
 

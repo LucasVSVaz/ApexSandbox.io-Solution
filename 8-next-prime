@@ -5,9 +5,14 @@ public Integer nextPrime(Integer num) {
     Integer count = num;
     
     for(Integer i = 0; i < count; i++){
-        if(isPrime(num + 1)){
+        if(num < 1){
+            result = 2;
+        }
+
+        else if(isPrime(num + 1)){
             result = num + 1;
-        } else {
+        }
+         else {
             num++;
         }
     }

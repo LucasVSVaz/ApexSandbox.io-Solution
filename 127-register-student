@@ -11,10 +11,12 @@ public String registerStudent(String name, String phone, String email) {
 
     insert addStudentList;
 
+    Id getId = addStudentList[0].id;
+
     List<apxio__Student__c> getRegistrationNumber  = [
         SELECT Id, apxio__Registration_Number__c
         FROM apxio__Student__c
-        WHERE Id = addStudentList[0].id
+        WHERE Id = getId
     ];
 
     return String.valueOf(getRegistrationNumber[0].apxio__Registration_Number__c);

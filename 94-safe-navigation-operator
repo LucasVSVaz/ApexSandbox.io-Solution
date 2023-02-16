@@ -6,7 +6,7 @@ public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
     String city = '';
    
     for(Account acct : accounts){
-       getBillingCity.add(acct?.BillingCity);
+       getBillingCity.add(acct.BillingCity);
    }
 
     /*for(Integer i = 0; i < getBillingCity.size(); i++){

@@ -14,7 +14,7 @@ public void createCourseAndClass(String name, String description) {
 
     for(apxio__Course__c course : [SELEC Id, name, apxio__Course_Details__c FROM apxio__Course__c]){
         addClass.Name = course.name;
-        addClass.apxio__Description__c;
+        addClass.apxio__Description__c = apxio__Course_Details__c;
     }
 
     List<apxio__Class__c> addClassList = new List<apxio__Class__c>{addClass};

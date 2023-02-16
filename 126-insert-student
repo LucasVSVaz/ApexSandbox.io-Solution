@@ -1,15 +1,15 @@
 public Id insertStudent(String name, String email) {
     // code here
 
-    apxio__Student__c newStudent = apxio__Student__c(
-        Name = name;
-        apxio__Email__c = email;
+    apxio__Student__c addStudent = new apxio__Student__c(
+        Name = name,
+        apxio__Email__c = email
     );
 
-    List<apxio__Student__c> addStudent = new apxio__Student__c(){newStudent};
+    List<apxio__Student__c> addStudentList = new List<apxio__Student__c>{newStudent};
 
-    insert addStudent;
+    insert addStudentList;
 
-    return addStudent[0].id;
+    return addStudentList[0].id;
     
 }

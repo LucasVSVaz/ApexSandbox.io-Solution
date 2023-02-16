@@ -12,7 +12,7 @@ public void insertStudents(List<String> studentNames, List<String> studentEmails
     for(String student : stringMap.keySet()){
         apxio__Student__c newStudent = new apxio__Student__c(
             Name = student,
-            apxio__Email__c = stringMap.get(student)
+            apxio__Email__c = stringMap.get(Name)
         );
         addStudent.add(newStudent);
     }

@@ -5,8 +5,8 @@ public Id insertCourse(String name, String details, Integer credits) {
 
     apxio__Course__c addCourse = new apxio__Course__c(
         Name = name,
-        apxio__Course_Details__c = details;
-        apxio__Credits__c = validCredits;
+        apxio__Course_Details__c = details,
+        apxio__Credits__c = validCredits
     );
 
     List<apxio__Course__c> addCourseList = new List<apxio__Course__c>{addCourse};

@@ -6,7 +6,7 @@ public Id insertStudent(String name, String email) {
         apxio__Email__c = email
     );
 
-    List<apxio__Student__c> addStudentList = new List<apxio__Student__c>{newStudent};
+    List<apxio__Student__c> addStudentList = new List<apxio__Student__c>{addStudent};
 
     insert addStudentList;
 

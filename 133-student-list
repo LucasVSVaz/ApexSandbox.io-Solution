@@ -1,6 +1,6 @@
 public void insertStudents(List<String> studentNames, List<String> studentEmails) {
     // code here
-    List<apxio__Student__c> addStudent = new apxio__Student__c();
+    List<apxio__Student__c> addStudent = new List<apxio__Student__c>();
 
     for(String name : studentNames){
         for(String email : studentEmails){

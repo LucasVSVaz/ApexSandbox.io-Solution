@@ -15,8 +15,9 @@ public Id classFromCourse(String courseName) {
                apxio__Course__c = course.Id,
                Name = course.Name
            );
+           addClassList.add(newClass);
        }
-        addClassList.add(newClass);
+        
     }
 
     insert addClassList;

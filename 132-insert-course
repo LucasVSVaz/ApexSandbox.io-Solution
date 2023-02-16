@@ -1,12 +1,12 @@
 public Id insertCourse(String name, String details, Integer credits) {
     // code here
 
-    //Integer validCredits = ;
+    Integer validCredits = credits > 4 || credits < 1 ? null : credits;
 
     apxio__Course__c addCourse = new apxio__Course__c(
         Name = name,
         apxio__Course_Details__c = details,
-        apxio__Credits__c = credits > 4 || credits < 1 ? null : credits
+        apxio__Credits__c = String.valueOf(credits);
     );
 
     List<apxio__Course__c> addCourseList = new List<apxio__Course__c>{addCourse};

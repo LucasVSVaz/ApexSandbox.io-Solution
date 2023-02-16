@@ -13,5 +13,20 @@ public void enrollStudents(List<String> emails, String className) {
         WHERE apxio__Email__c IN:emails
     ];
 
+    List<apxio__Class_Enrollment__c> addClassEnrollment = new List<apxio__Class_Enrollment__c>();
+
+    if(!getClassByName.isEmpty()){
+        for(apxio__Student__c student : getSudentsByEmails){
+            for(apxio__Class__c c : getClassByName){
+                apxio__Class_Enrollment__c newClassEnrollment = new apxio__Class_Enrollment__c(
+                    	apxio__Student__c = student.Id,
+                        apxio__Offered_Class__c = c.Id
+                );
+                addClassEnrollment.add(newClassEnrollment);
+            }
+        }
+    }
+
+    insert addClassEnrollment;
     
 }

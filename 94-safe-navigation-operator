@@ -1,12 +1,19 @@
 public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
    // Code here
-   String getCity = '';
-   List<String> getBillingCity = new List<String>();
+   
+    List<String> getBillingCity = new List<String>();
 
-   for(Account acct : accounts){
+    String city = '';
+   
+    for(Account acct : accounts){
        getBillingCity.add(acct?.BillingCity);
    }
-   
 
-   return getBillingCity[0].toUpperCase();
+   for(Integer i = 0; i < getBillingCity.size(); i++){
+        if(getBillingCity[i] != null){
+        city = getBillingCity[i];
+       }
+    }
+
+    return city.toUpperCase();
 }

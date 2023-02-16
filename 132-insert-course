@@ -13,5 +13,5 @@ public Id insertCourse(String name, String details, Integer credits) {
 
     insert addCourseList;
 
-    return addCourseList[0].id;
+    return addCourseList[0].apxio__Credits__c == null ? null : addCourseList[0].id;
 }

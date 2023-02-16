@@ -15,7 +15,7 @@ public Id insertCourse(String name, String details, Integer credits) {
 
     if(addCourseList.size() > 0){
         insert addCourse;
-        return addCourse[0].id;
+        return addCourseList[0].id;
     } else {
         return null;
     }

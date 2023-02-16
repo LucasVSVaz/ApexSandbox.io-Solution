@@ -6,7 +6,9 @@ public String divide(Integer a, Integer b){
     try{
         result = a / b;
         return String.valueOf(result);
-    } catch (Exception e){
+    } catch (MathException e){
+        return e.getMessage();
+    } catch (NullPointerException e){
         return e.getMessage();
     }
 }

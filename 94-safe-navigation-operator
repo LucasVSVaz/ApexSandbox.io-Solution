@@ -6,6 +6,7 @@ public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
    for(Account acct : accounts){
        getBillingCity.add(acct?.BillingCity);
    }
+   
 
-   return getBillingCity[0].toUpperCase;
+   return getBillingCity[0].toUpperCase();
 }

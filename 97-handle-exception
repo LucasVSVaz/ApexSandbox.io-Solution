@@ -6,8 +6,8 @@ public String divide(Integer a, Integer b){
     try{
         result = a / b;
         return String.valueOf(result);
-    } catch{
-        throw new AuraHandledException('Divide by 0');
-        return getMessage();
+    } catch (Exception e){
+        return e.getMessage('Divide by 0');
+        
     }
 }

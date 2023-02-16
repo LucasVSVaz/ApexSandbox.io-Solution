@@ -17,10 +17,8 @@ public Id classFromCourse(String courseName) {
            );
            addClassList.add(newClass);
        }
-        
+         insert addClassList;
     }
-
-    insert addClassList;
 
     return addClassList[0].Id;
 }

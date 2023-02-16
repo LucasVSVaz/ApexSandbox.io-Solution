@@ -1,0 +1,23 @@
+public List<Account> checkAccounts(List<Account> accounts)
+{
+    // code here 
+    if(accounts == null){
+        return throw new IllegalArgumentException('accounts should not be null'); 
+    }
+    
+    for(Account acct : accounts){
+        if(acct.BillingCity == null){
+            return throw new AccountException('BillingCity Field cannot be null');
+        }
+    }
+
+    return accounts; 
+
+
+}
+
+//do not remove the following custom-defined exception
+public class AccountException extends Exception {
+
+
+}

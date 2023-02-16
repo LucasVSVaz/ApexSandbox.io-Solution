@@ -11,8 +11,8 @@ public Id insertCourse(String name, String details, Integer credits) {
 
     if(addCourseList[0].apxio__Credits__c < 4 || addCourseList[0].apxio__Credits__c >= 1){
         insert addCourseList;
+        return addCourseList[0].id;
     }
     
-
-    return addCourseList[0].id;
+    return null;
 }

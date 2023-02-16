@@ -7,7 +7,7 @@ public Id classFromCourse(String courseName) {
         LIMIT 1
     ];
 
-    List<apxio__Class__c> addClassList = List<apxio__Class__c>();
+    List<apxio__Class__c> addClassList = new List<apxio__Class__c>();
 
     if(!getCourse.isEmpty()){
        for(apxio__Course__c course : getCourse){

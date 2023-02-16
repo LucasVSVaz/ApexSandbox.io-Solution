@@ -13,7 +13,7 @@ public Id insertCourse(String name, String details, Integer credits) {
         addCourseList.add(addCourse);
     }
 
-    if(!addCourse.isEmpty()){
+    if(!addCourseList.isEmpty()){
         insert addCourse;
         return addCourse[0].id;
     } else {

@@ -5,6 +5,10 @@ List<Account> acctList = new List<Account>();
 
 List<Object> getJsonAcct = (List<Object>)JSON.deserializeUntyped(inputJSON);
 
+if(String.isBlank(inputJSON)){
+    return null;
+}
+
 for(Object obj : getJsonAcct){
     Map<String, Object> objMap = (Map<String, Object>)obj;
     Account newAcct = new Account(

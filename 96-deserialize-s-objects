@@ -1,0 +1,11 @@
+public List<Account> getAccountsFromJSONString(String inputJSON){
+    // code here
+
+    
+
+    List<Account> getJsonAcct = (List<Account>)JSON.deserializeUntyped(inputJSON);
+
+    return getJsonAcct;
+
+    
+}

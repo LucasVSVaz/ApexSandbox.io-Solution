@@ -6,7 +6,7 @@ List<Account> acctList = new List<Account>();
 List<Object> getJsonAcct = (List<Object>)JSON.deserializeUntyped(inputJSON);
 
 if(String.isBlank(inputJSON)){
-    return acctList?.add(null);
+    return null;
 }
 
 for(Object obj : getJsonAcct){

@@ -1,11 +1,15 @@
 public List<Account> getAccountsFromJSONString(String inputJSON){
     // code here
 
-    
+    List<Account> acctList = new List<Account>();
 
-    List<Account> getJsonAcct = (List<Account>)JSON.deserializeUntyped(inputJSON);
+    List<Object> getJsonAcct = (List<Object>)JSON.deserializeUntyped(inputJSON);
 
-    return getJsonAcct;
+    for(Object obj : getJsonAcct){
+        acctList.add((Account)obj);
+    }
+
+    return acctList;
 
     
 }

@@ -3,10 +3,10 @@ public List<Account> getAccountsFromJSONString(String inputJSON){
 
 List<Account> acctList = new List<Account>();
 
-List<Object> getJsonAcct = (List<Object>)JSON?.deserializeUntyped(inputJSON);
+List<Object> getJsonAcct = (List<Object>)JSON.deserializeUntyped(inputJSON);
 
 if(String.isBlank(inputJSON)){
-    return null;
+    return acctList?.add(null);
 }
 
 for(Object obj : getJsonAcct){

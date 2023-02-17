@@ -16,7 +16,7 @@ for(Object obj : getJsonAcct){
     	Name = String.valueOf(objMap.get('Name'))
     );
     
-    acctList.add(newAcct);
+    acctList?.add(newAcct);
     }
 
     return acctList;

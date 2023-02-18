@@ -9,7 +9,7 @@ String userName = UserInfo.getUserName();
 Map<String,String> userMap = new Map<String,String>();
     
 userMap.put('EmailId', emailId);
-userMap.put('userMap', userProfileId);
+userMap.put('ProfileId', userProfileId);
 userMap.put('Type', userType);
 userMap.put('UserName', userName);
 

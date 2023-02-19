@@ -3,7 +3,8 @@ public Boolean isKeyAccount(Account a) {
 
     switch on Account {
         when(Account.Industry == 'Banking') {
-            Account.AnnualRevenue >= 600000 return true
+            if(Account.AnnualRevenue >= 600000) return true;
+                
         }
     }
 }

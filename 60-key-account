@@ -1,7 +1,6 @@
 public Boolean isKeyAccount(Account a) {
     //code here
 
-    public static Boolean isKeyAccount(Account acc) {
     String industry = acc.Industry;
     Double revenue = acc.AnnualRevenue;
     switch on industry {
@@ -27,6 +26,4 @@ public Boolean isKeyAccount(Account a) {
         }
     }
     return false;
-}
-
 }

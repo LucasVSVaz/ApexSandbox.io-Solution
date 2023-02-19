@@ -27,7 +27,7 @@ public class AccountWrapper implements Comparable{
 
     public Account acct;
 
-    public Account (Account actt){
+    public AccountWrapper (Account actt){
         this.acct = acct;
     }
 

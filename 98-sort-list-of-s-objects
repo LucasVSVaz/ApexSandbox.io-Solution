@@ -33,10 +33,10 @@ public class AccountWrapper implements Comparable{
 
     public Integer compareTo (Object compareTo){
         AccountWrapper compareToAcct = (AccountWrapper)compareTo;
-        if (annualRevenue == compareToAcct.annualRevenue){
+        if (compareToAcct.acct.annualRevenue == this.acct.annualRevenue){
             return 0;
         } 
-        if(annualRevenue > compareToAcct.annualRevenue){
+        if(compareToAcct.acct.annualRevenue > this.acct.annualRevenue){
             return 1;
         }
         return -1;

@@ -1,10 +1,32 @@
 public Boolean isKeyAccount(Account a) {
     //code here
 
-    switch on a {
-        when(a.Industry == 'Banking') {
-            if(a.AnnualRevenue >= 600000) return true;
-                
+    public static Boolean isKeyAccount(Account acc) {
+    String industry = acc.Industry;
+    Double revenue = acc.AnnualRevenue;
+    switch on industry {
+        when 'Banking' {
+            if (revenue >= 600000) {
+                return true;
+            }
+        }
+        when 'Technology' {
+            if (revenue >= 800000) {
+                return true;
+            }
+        }
+        when 'Retail' {
+            if (revenue >= 2000000) {
+                return true;
+            }
+        }
+        when else {
+            if (revenue >= 500000) {
+                return true;
+            }
         }
     }
+    return false;
+}
+
 }

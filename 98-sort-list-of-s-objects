@@ -8,7 +8,7 @@ public List<Account> getAccounts(List<Account> accounts) {
     List<AccountWrapper> acctWrapper = new List<AccountWrapper>();
 
     for(Account acct : accounts){
-        acctWrapper.add(acct);
+        acctWrapper.add(new AccountWrapper(acct));
     }
 
     acctWrapper.sort();

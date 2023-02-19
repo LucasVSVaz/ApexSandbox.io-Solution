@@ -1,5 +1,5 @@
 public Boolean isBirthday(Contact c) {
     //code here
 
-    return (c.Birthdate == Date.today()) && (c.Birthdate.Day() == Date.today().Day() && c.Birthdate.Day.month() == Date.today().month()) ? true : false;
+    return ((c.Birthdate == Date.today()) && (c.Birthdate.Day() == Date.today().Day())) && (c.Birthdate.Day.month() == Date.today().month()) ? true : false;
 }

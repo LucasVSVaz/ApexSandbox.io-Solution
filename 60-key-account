@@ -1,9 +1,9 @@
 public Boolean isKeyAccount(Account a) {
     //code here
 
-    switch on Account {
-        when(Account.Industry == 'Banking') {
-            if(Account.AnnualRevenue >= 600000) return true;
+    switch on a {
+        when(a.Industry == 'Banking') {
+            if(a.AnnualRevenue >= 600000) return true;
                 
         }
     }

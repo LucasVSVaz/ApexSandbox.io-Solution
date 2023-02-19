@@ -1,14 +1,44 @@
 public List<Account> getAccounts(List<Account> accounts) {
     // code here
 
-    accounts.sort();
-
-    List<Account> accountsResult = new List<Account>();
-
-    for(Integer i = accounts.size() - 1; i >= 0; i--){
-        accountsResult.add(accounts[i]);
+    if(accounts == null){
+        return null;
     }
 
-    return accountsResult;
+    List<AccountWrapper> acctWrapper = List<AccountWrapper>();
+
+    for(Account acct : accounts){
+        acctWrapper.add(acct);
+    }
+
+    acctWrapper.sort();
+
+    for(Integer i = 0; i < accounts.size(); i++) {
+        accounts[i] = acctWrapper[i].acc;
+    }
+
+    return accounts;
+
 }
+
+
 // write extra class here 
+global class AccountWrapper implements Comparable{
+
+    public Account acct;
+
+    public Account (Account actt){
+        this.acct = acct;
+    }
+
+    global Integer compareTo (Object compareTo){
+        AccountWrapper compareToAcct = (AccountWrapper)compareTo;
+        if (annualRevenue == compareToAcct.annualRevenue){
+            return 0;
+        } 
+        if(annualRevenue > compareToAcct.annualRevenue){
+            return 1;
+        }
+        return -1;
+    }
+}

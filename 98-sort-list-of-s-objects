@@ -14,7 +14,7 @@ public List<Account> getAccounts(List<Account> accounts) {
     acctWrapper.sort();
 
     for(Integer i = 0; i < accounts.size(); i++) {
-        accounts[i] = acctWrapper[i].acc;
+        accounts[i] = acctWrapper[i].acct;
     }
 
     return accounts;

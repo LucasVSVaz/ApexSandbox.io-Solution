@@ -1,7 +1,7 @@
 public List<Account> getAccounts(List<Account> accounts) {
     // code here
 
-    List<Account> sortedList = accounts.sort();
+    List<Account> sortedList = new List<Account>{accounts.sort()}
 
     List<Account> accountsResult = new List<Account>();
 

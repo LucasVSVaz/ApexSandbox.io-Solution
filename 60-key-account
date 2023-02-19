@@ -1,8 +1,8 @@
 public Boolean isKeyAccount(Account a) {
     //code here
 
-    String industry = acc.Industry;
-    Double revenue = acc.AnnualRevenue;
+    String industry = a.Industry;
+    Double revenue = a.AnnualRevenue;
     switch on industry {
         when 'Banking' {
             if (revenue >= 600000) {

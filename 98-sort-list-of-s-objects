@@ -1,0 +1,16 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    // code here
+
+    List<Account> resultList = new List<Account>();
+
+    for(Integer i = 0; i < accounts.size; i++){
+        if(accounts[i].AnnualRevenue > accounts[i + 1].AnnualRevenue){
+             resultList.add(accounts[i]);   
+        } else {
+             resultList.add(accounts[i + 1]);
+        }
+    }
+
+    return resultList;
+}
+// write extra class here 

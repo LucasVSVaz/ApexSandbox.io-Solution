@@ -23,7 +23,7 @@ public List<Account> getAccounts(List<Account> accounts) {
 
 
 // write extra class here 
-global class AccountWrapper implements Comparable{
+public class AccountWrapper implements Comparable{
 
     public Account acct;
 
@@ -31,7 +31,7 @@ global class AccountWrapper implements Comparable{
         this.acct = acct;
     }
 
-    global Integer compareTo (Object compareTo){
+    public Integer compareTo (Object compareTo){
         AccountWrapper compareToAcct = (AccountWrapper)compareTo;
         if (annualRevenue == compareToAcct.annualRevenue){
             return 0;

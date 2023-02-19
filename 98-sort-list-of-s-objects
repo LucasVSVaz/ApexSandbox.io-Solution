@@ -5,7 +5,7 @@ public List<Account> getAccounts(List<Account> accounts) {
         return null;
     }
 
-    List<AccountWrapper> acctWrapper = List<AccountWrapper>();
+    List<AccountWrapper> acctWrapper = new List<AccountWrapper>();
 
     for(Account acct : accounts){
         acctWrapper.add(acct);
